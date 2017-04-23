@@ -7,13 +7,13 @@
     <body>
         <div ng-controller="myController" style="font-family:arial ">
              <ul>
-                 <li ng-repeat="country in countries">
+                 <li ng-repeat="country in countries" ng-init="parentIndex=$index">
                      {{country.name}} 
                      <br />
                      <br />
                      <ul>
                          <li ng-repeat="city in country.cities">
-                             {{city.name}}
+                             {{city.name}} - Parent Index {{parentIndex}}, Index {{$index}}
                          </li>
                      </ul>
                  </li>
